@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Nova notícia sobre games
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input [(ngModel)]="gameInfo.title" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input [(ngModel)]="gameInfo.description" name="description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">URL Imagem</ion-label>
+      <ion-input [(ngModel)]="gameInfo.urlImage" name="url-image"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Adicionar</ion-button>
+  </form>
+</ion-content>

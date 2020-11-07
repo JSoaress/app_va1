@@ -23,6 +23,11 @@ export class AppComponent implements OnInit {
       icon: 'game-controller'
     },
     {
+      title: 'Cadastrar notícia',
+      url: 'register-info',
+      icon: 'receipt'
+    },
+    {
       title: 'Cadastro',
       url: 'register',
       icon: 'person-add'

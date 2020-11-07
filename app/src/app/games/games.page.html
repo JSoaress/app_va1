@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Games</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let g of gamesInfos">
+      <img src="{{ g.urlImage }}">
+      <ion-card-header>
+        <ion-card-title>{{ g.title }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <p>{{ g.description }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-fab (click)="newNotice()" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
